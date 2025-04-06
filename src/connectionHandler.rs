@@ -31,7 +31,7 @@ pub async fn connect_server() -> Result<(WriteStream, ReadStream), Box<dyn Error
     rustls::crypto::ring::default_provider().install_default().expect(" Err : ");
     
     
-    let url = Url::parse(&ip)?;
+    let url = Url::parse("wss://13.202.13.169:10000")?;
 
 
     // Extract the domain from the URL for TLS verification
